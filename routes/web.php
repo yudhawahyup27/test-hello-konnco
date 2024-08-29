@@ -29,7 +29,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [Pelanggan::class, 'index']);
 Route::get('/registrasi', [Pelanggan::class, 'registrasi']);
 Route::post('/registrasi', [Pelanggan::class, 'create_registrasi']);
-Route::get('/login', [LoginController::class, 'login']);
+Route::get('/login', [LoginController::class, 'login'])->name('login');
 Route::post('/login', [LoginController::class, 'process_login']);
 Route::get('/tentang-kami', [Pelanggan::class, 'tentang_kami']);
 Route::get('/logout', [Pelanggan::class, 'logout']);
